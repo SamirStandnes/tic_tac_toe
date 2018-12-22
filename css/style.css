@@ -1,0 +1,140 @@
+:root {
+  --main-bg-color: white;
+  --board-fram-color: #d2e4f0;
+  --cell-border-color: #d2e4f0;
+  --score-font-size: 1em;
+  --main-font: "Bowlby One SC", cursive;
+  --sign-color: #4a708b;
+  --board-color: #6ca6cd;
+  --sign-font-size: 3em;
+  --score-clear-padding: 25px;
+  --board-padding-top-bottom: 35px;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+.heading {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.container {
+  grid: display;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  width: 20%;
+  margin: 0 auto;
+  min-width: 450px;
+  background-color: var(--main-bg-color);
+  min-height: 250px;
+}
+
+.one {
+  grid-column: 1 / 1;
+  grid-row: 1;
+}
+
+.two {
+  grid-column: 1 / 1;
+  grid-row: 2;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.welcome,
+.pickSign {
+  text-align: center;
+  padding-top: var(--board-padding-top-bottom);
+  font-size: 2em;
+}
+
+.numPlayer,
+.playerSign {
+  font-size: 0.8em;
+  padding-top: 25px;
+  padding-bottom: 85px;
+}
+
+.numPlayer1,
+.numPlayer2,
+.playerSign1,
+.playerSign2 {
+  border: solid;
+  width: 75px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.numPlayer1:hover,
+.playerSign1:hover {
+  border: dotted;
+}
+.numPlayer2:hover,
+.playerSign2:hover {
+  border: dotted;
+}
+
+#table {
+  width: 100%;
+  border: none;
+  text-align: center;
+  background-color: var(--board-fram-color);
+  padding-top: 15px;
+  padding-bottom: var(--board-padding-top-bottom);
+  border-radius: 10%;
+}
+
+.cell {
+  border: solid 0.5px var(--cell-border-color);
+  width: 30%;
+  height: 70px;
+  cursor: pointer;
+  background-color: var(--board-color);
+  color: var(--board-color);
+}
+
+.cell:active{
+  outline: none;
+}
+.scoreBoard {
+  padding-bottom: var(--board-padding-top-bottom);
+}
+
+#score {
+  font-size: var(--score-font-size);
+  float: left;
+  padding-left: var(--score-clear-padding);
+}
+#clear {
+  cursor: pointer;
+  float: right;
+  padding-right: var(--score-clear-padding);
+}
+#clear:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--main-font);
+  font-size: var(--sign-font-size);
+}
+button:disabled {
+  border: 0.5px solid var(--cell-border-color);
+  background-color: var(--board-color);
+  color: var(--sign-color);
+}
+
+.changeHeading {
+  color: var(--sign-color);
+  text-align: center;
+  font-size: 4em;
+  margin-bottom: 20px;
+  -webkit-transition: color, font-size 800ms ease-out 100ms;
+  -moz-transition: color, font-size 800ms ease-out 100ms;
+  -o-transition: color, font-size 800ms ease-out 100ms;
+  transition: color, font-size 800ms ease-out 100ms;
+}

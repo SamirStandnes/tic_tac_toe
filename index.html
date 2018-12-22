@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>TicTacToe: 100% Vanilla JS - June 1, 2018</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+
+<div class="heading"> Tic Tac Toe </div>
+
+<div class="container">
+
+  <div class="one">
+    <div class="welcome" style="display:block">
+      Number of human players?
+      <div class="numPlayer">
+        <span class="numPlayer1" style="float: left; margin-left: 55px;" onClick="numPlayer(1)"> ONE </span>
+        <span class="numPlayer2" style="float: right; margin-right: 55px;" onClick="numPlayer(2)"> TWO </span>
+      </div>
+    </div>
+    <div class="pickSign" style="display:none">
+      <span id="pickSign">Pick sign</span>
+      <div class="playerSign">
+        <span class="playerSign1" style="float: left; margin-left: 55px;" onClick="playerSign('X')">X</span> <span class="playerSign2" style="float: right; margin-right: 55px;" onClick="playerSign('O')">O</span>
+      </div>
+    </div>
+  </div>
+  <div class="two">
+    <div id="table" style="display:none">
+      <div class="scoreBoard"> <span id="score">Scoreboard</span> <span id="clear" onClick="clearRound()"> clear</span>           </div>
+    </div>
+  </div>
+
+</div>
+  
+
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
